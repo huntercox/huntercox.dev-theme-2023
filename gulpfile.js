@@ -38,7 +38,7 @@ function minify() {
 // compile scss to css
 function styles() {
 	// 1. locate source SCSS files
-	return gulp.src(['assets/src/scss/**/*.scss', '!assets/src/scss/wp/**/*.scss'])
+	return gulp.src('assets/src/scss/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(sourcemaps.write())

@@ -1,0 +1,68 @@
+input,
+textarea {
+	padding-top: 4px;
+	background-color: $dark;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	border: 1px solid $green;
+	border-radius: 3px;
+	text-transform: uppercase;
+	color: $white;
+
+	&::selection {
+		background-color: $pink;
+	}
+
+	&:focus {
+		border-color: lighten($green, 10%);
+		box-shadow: 0 0 1px $green, 0 0 2px $green, 0 0 3px $green;
+		outline: none;
+	}
+}
+
+/* Gravity Forms */
+
+// Contact form
+.gform_heading {
+	display: none;
+}
+.gform_wrapper.contact-form_wrapper .contact-form {
+	.gfield_header_item,
+	.gform_fileupload_rules,
+	.ginput_complex label {
+		font-size: 11px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin-bottom: 3px;
+	}
+	input[type=text],
+	input[type=email],
+	textarea {
+		font-size: 14px;
+		line-height: 1;
+
+		&::selection {
+			color: $dark;
+			background-color: $green;
+		}
+	}
+	.gfield_label {
+		display: none;
+	}
+
+	#field_1_3 {
+		.gfield_label {
+			display: block;
+			font-size: 11px;
+			font-weight: normal;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin-bottom: 3px;
+			color: $dark;
+		}
+		.gfield_description {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*::selection {
+	color: $indigo;
+	background-color: rgba($pink, 80%);
+}
+html {
+	background-color: $background_color;
+	color: $green;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+
+html,
+body {
+	height: 100dvh;
+}
+#site {
+	display: grid;
+	height: 100%;
+	padding-top: 1rem;
+	grid-template-rows: auto 1fr auto;
+}
+
+@import 'text';
+@import 'utility';
+@import 'forms';
+@import 'tables';

@@ -23,6 +23,8 @@ Text Domain: hcdev2023
  */
 
 @import './variables/variables';
-@import './post-types/post-types';
-@import './templates/templates';
+@import './base/base';
 @import './wp/wp';
+@import './parts/parts';
+@import './templates/templates';
+@import './post-types/post-types';

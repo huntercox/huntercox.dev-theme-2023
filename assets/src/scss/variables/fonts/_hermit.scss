@@ -1,0 +1,27 @@
+/* Hermit */
+@font-face {
+	font-family: 'Hermit Regular';
+	font-weight: normal;
+	font-style: normal;
+	src: url('./assets/dist/fonts/Hermit/Hermit-Regular.woff2') format('woff2'),
+		url('./assets/dist/fonts/Hermit/Hermit-Regular.woff') format('woff');
+}
+$hermit: 'Hermit Regular';
+
+@font-face {
+	font-family: 'Hermit Bold';
+	font-weight: bold;
+	font-style: normal;
+	src: url('./assets/dist/fonts/Hermit/Hermit-Bold.woff2') format('woff2'),
+		url('./assets/dist/fonts/Hermit/Hermit-Bold.woff') format('woff');
+}
+$hermit_bold: 'Hermit Bold';
+
+// @font-face {
+// 	font-family: 'Hermit Light';
+// 	font-weight: lighter;
+// 	font-style: normal;
+// 	src: url('./assets/dist/fonts/Hermit/Hermit-Light.woff2') format('woff2'),
+// 		url('./assets/dist/fonts/Hermit/Hermit-Light.woff') format('woff');
+// }
+// $hermit_light: 'Hermit Light';

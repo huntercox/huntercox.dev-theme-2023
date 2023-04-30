@@ -1,0 +1,11 @@
+.breadcrumbs {
+	ul {
+		padding-left: 0;
+		list-style-type: none;
+		display: flex;
+
+		li {
+			flex-direction: row;
+		}
+	}
+}

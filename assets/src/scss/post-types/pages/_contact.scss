@@ -1,0 +1,32 @@
+.contact {
+	.page__title {
+		position: relative;
+
+		&::before {
+			content: "";
+			background-image: url('./node_modules/sargam-icons/icons/Duotone/si_Notifications_alt.svg');
+			background-size: 24px 24px;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 30px;
+			height: 30px;
+			display: block;
+			padding: 5px;
+			background-color: $green;
+			position: relative;
+			top: 25%;
+			left: 0;
+		}
+	}
+	.page__content {
+		h2 {
+			margin-bottom: 20px;
+		}
+
+		.wp-block-columns {
+			@media (max-width: 992px) {
+				flex-direction: column;
+			}
+		}
+	}
+}

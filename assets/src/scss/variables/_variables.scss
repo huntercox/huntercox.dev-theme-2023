@@ -1,5 +1,29 @@
-// Base Theme
-@import './base-theme/base-theme';
+@import 'colors';
+@import 'fonts/fonts';
 
-// This Theme
-@import './this-theme/this-theme';
+// Icons
+
+// Sargam icons
+$duotone: './node_modules/sargam-icons/icons/Duotone';
+
+.line {
+	background-image: url('https://sargamicons.com/icons/Line/si_Terminal_alt.svg');
+	width: 24px;
+	height: 24px;
+}
+.duotone {
+	background-image: url('https://sargamicons.com/icons/Duotone/si_Terminal_alt.svg');
+	width: 24px;
+	height: 24px;
+}
+.fill {
+	background-image: url('https://sargamicons.com/icons/Fill/si_Terminal_alt.svg');
+	width: 24px;
+	height: 24px;
+}
+
+
+// Main Color Variables
+$background_color: $dark;
+$font_color1: $green;
+$font_color2: $pink;

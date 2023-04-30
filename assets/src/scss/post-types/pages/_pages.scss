@@ -1,0 +1,25 @@
+.page {
+	&__header {
+		margin: 0 0 2rem 0;
+		position: relative;
+
+		&--inner {
+			position: relative;
+			z-index: 1;
+		}
+	}
+	&__content {
+		margin-bottom: 4rem;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+
+}
+
+@import 'home';
+@import 'contact';
+@import 'resume';
+@import 'styles';

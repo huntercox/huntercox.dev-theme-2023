@@ -1,0 +1,67 @@
+.header {
+	background-color: $dark;
+	background: linear-gradient(45deg, $dark 20%, $dark 80%);
+	border-top: 1px solid $green;
+	border-bottom: 1px solid $green;
+	height: 60px;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	/* Brand */
+	&__brand {
+		background-color: $pink;
+		border-top: 1px solid $pink;
+		border-bottom: 1px solid $pink;
+		padding: 15px;
+		display: block;
+		height: 100%;
+
+		.header__site-title {
+			line-height: 30px;
+
+			a {
+				color: $dark;
+				font-variation-settings: "wght" 200;
+
+				&:hover {
+					text-decoration: none;
+					font-variation-settings: "wght" 800, "CASL" 1;
+				}
+			}
+		}
+	}
+
+	/* Navigation */
+	&__main-navigation {
+		ul {
+			list-style: none;
+			display: flex;
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			li {
+				margin-right: 2rem;
+				margin-top: 0;
+				margin-bottom: 0;
+
+				a {
+					color: $pink;
+					font-weight: bold;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
