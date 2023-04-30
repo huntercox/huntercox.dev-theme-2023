@@ -1,0 +1,28 @@
+/*
+Theme Name: 2023 Theme for huntercox.dev
+Theme URI: https://huntercox.dev
+Description: Second iteration of the theme used for my personal website, huntercox.dev, to display information about my work and experience as a developer.
+Author: Hunter Cox
+Author URI: https://huntercox.dev
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hcdev2023
+*/
+
+/*!
+ * Theme Name: 2023 Theme for huntercox.dev
+ * Theme URI: https://huntercox.dev
+ * Description: Second iteration of the theme used for my personal website, huntercox.dev, to display information about my work and experience as a developer.
+ * Author: Hunter Cox
+ * Author URI: https://huntercox.dev
+ * Version: 1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: hcdev2023
+ */
+
+@import './variables/variables';
+@import './post-types/post-types';
+@import './templates/templates';
+@import './wp/wp';

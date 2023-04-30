@@ -1,0 +1,22 @@
+{
+	"name": "huntercox.dev-2023-wp-theme",
+	"version": "1.0.0",
+	"description": "WordPress theme for my personal website, huntercox.dev.",
+	"author": "Hunter Cox",
+	"license": "MIT",
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.1.0",
+		"featherlight": "^1.7.14",
+		"minireset.css": "^0.0.7"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.27.9",
+		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-npm-dist": "^1.0.3",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"sass": "~1.49.9"
+	}
+}
