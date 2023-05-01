@@ -16,6 +16,7 @@ if (have_rows('flex_layouts')) :
 	while (have_rows('flex_layouts')) : the_row();
 
 		echo '<section class="flex-layout layout--' . get_row_layout() . '">';
+		echo '<div class="flex-layout__content">';
 
 		if (get_row_layout() == 'hero') :
 			/* HERO */
@@ -34,6 +35,7 @@ if (have_rows('flex_layouts')) :
 			get_template_part('templates/flexible-content/section-heading');
 
 		endif;
+		echo '</div>';
 		echo '</section>';
 
 	endwhile;

@@ -1,2 +1,10 @@
+.flex-layout {
+	.flex-layout__content {
+		padding: 1rem 0;
+	}
+}
+
 @import 'flex-layouts/hero';
-@import 'flex-layouts/content';
+@import 'flex-layouts/basic-content';
+@import 'flex-layouts/advanced-content';
+@import 'flex-layouts/section-heading';

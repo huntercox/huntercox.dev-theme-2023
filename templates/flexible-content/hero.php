@@ -47,7 +47,7 @@ if ($image) :
 
 	echo '<div class="hero">';
 
-	if ($layout_settings['parallax'] == true) {
+	if ($flex_settings['parallax'] == 'true') {
 		$size = 'flex-hero-tall';
 		$img_src = wp_get_attachment_image_src($image, $size);
 

@@ -317,8 +317,8 @@
                         "id": ""
                     },
                     "default_value": 300,
-                    "min": 200,
-                    "max": 500,
+                    "min": 80,
+                    "max": 1200,
                     "placeholder": "",
                     "step": 1,
                     "prepend": "",
@@ -403,5 +403,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682340221
+    "modified": 1682903725
 }
