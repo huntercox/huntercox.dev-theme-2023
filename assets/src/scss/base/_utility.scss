@@ -48,3 +48,11 @@
 		box-shadow: 4px 4px 0px $green;
 	}
 }
+
+.bg-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: auto;
+	width: 100%;
+}

@@ -1,3 +1,7 @@
+* {
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+}
 *,
 *::before,
 *::after {
@@ -37,10 +41,11 @@ body {
 	height: 100dvh;
 }
 #site {
-	display: grid;
-	height: 100%;
-	padding-top: 1rem;
-	grid-template-rows: auto 1fr auto;
+	// display: grid;
+	// height: 100%;
+	// padding-top: 1rem;
+	// grid-template-rows: auto fit-content(100%) auto;
+	display: block;
 }
 
 @import 'text';
