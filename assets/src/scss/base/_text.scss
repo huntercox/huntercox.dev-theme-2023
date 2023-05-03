@@ -1,4 +1,5 @@
 body {
+	//font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
 	color: $white;
 	font-size: 20px;
 	font-family: $font-family;
@@ -153,7 +154,6 @@ h4 {
 	font-style: italic;
 	font-size: 1.8rem;
 	text-transform: uppercase;
-	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
 	font-variation-settings: "MONO" 0.5, "CASL" 1, "wght" 200, "slnt" 0.25, "CRSV" 1;
 	margin-bottom: 15px;
 }
