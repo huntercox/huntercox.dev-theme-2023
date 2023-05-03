@@ -11,7 +11,7 @@ echo '<div class="employer' . esc_attr($classes) . '">';
 $employer_name = $post->post_title;
 echo '<h2 class="employer__name">' . $employer_name . '</h2>';
 
-$employment_dates = get_field('employment_dates', $employer->ID);
+$employment_dates = get_field('employment_dates', $post->ID);
 $employment_start_date = $employment_dates['start_date'];
 $employment_end_date = '';
 
@@ -24,7 +24,7 @@ if ($employment_start_date) {
 	echo '</div>';
 }
 
-if (!hsc_is_current_employer($employer->ID)) {
+if (!hsc_is_current_employer($post->ID)) {
 	$employment_end_date = $employment_dates['end_date'];
 
 	if ($employment_end_date) {
