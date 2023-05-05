@@ -3,9 +3,29 @@
     "title": "Employment Details",
     "fields": [
         {
-            "key": "field_643c9d55e006d",
-            "label": "Employment Dates",
-            "name": "employment_dates",
+            "key": "field_64530b3385f88",
+            "label": "Job Title",
+            "name": "job_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6453179c7ec10",
+            "label": "Status",
+            "name": "status",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -16,28 +36,10 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "row",
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_643c9d6de006e",
-                    "label": "Start Date",
-                    "name": "start_date",
-                    "aria-label": "",
-                    "type": "date_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "F j, Y",
-                    "return_format": "m\/d\/Y",
-                    "first_day": 1
-                },
-                {
-                    "key": "field_6451adab7068a",
+                    "key": "field_645319fdf90d5",
                     "label": "Current Employer",
                     "name": "current_employer",
                     "aria-label": "",
@@ -50,16 +52,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "message": "Are you currently working for this employer?",
+                    "message": "Are you currently working here?",
                     "default_value": 0,
                     "ui": 0,
                     "ui_on_text": "",
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_643c9df7e006f",
-                    "label": "End Date",
-                    "name": "end_date",
+                    "key": "field_645317ac7ec11",
+                    "label": "Start Date",
+                    "name": "start_date",
                     "aria-label": "",
                     "type": "date_picker",
                     "instructions": "",
@@ -67,22 +69,108 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_6451adab7068a",
-                                "operator": "!=",
+                                "field": "field_645319fdf90d5",
+                                "operator": "==",
                                 "value": "1"
                             }
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "F j, Y",
+                    "display_format": "m\/d\/Y",
                     "return_format": "m\/d\/Y",
                     "first_day": 1
                 }
             ]
+        },
+        {
+            "key": "field_64530d1f07511",
+            "label": "Length of Employment",
+            "name": "length_of_employment",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_645319fdf90d5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_64530d3a07512",
+                    "label": "Years",
+                    "name": "years",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": 2,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "years"
+                },
+                {
+                    "key": "field_64530d6d07513",
+                    "label": "Months",
+                    "name": "months",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": 2,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "months"
+                }
+            ]
+        },
+        {
+            "key": "field_64530e2112b11",
+            "label": "Location",
+            "name": "location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Location as City,State or \"Remote\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -94,14 +182,16 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": -1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "featured_image"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683085888
+    "modified": 1683260777
 }
