@@ -1,0 +1,126 @@
+// table.xdebug-error {
+// 	width: 60%;
+// 	background: white;
+// 	border: none;
+// 	border-spacing: none;
+// 	border-collapse: collapse;
+// 	box-shadow: 0px 3px 10px 0px black;
+// 	position: fixed;
+// 	top: 0px;
+// 	right: 0px;
+// 	z-index: 8888;
+// 	font: 14px verdana;
+// 	transform-origin: top 0;
+// 	transform: scaleX(50%);
+// 	opacity: 0.9;
+// 	transition: all 200ms ease;
+// }
+// table.xdebug-error caption,
+// table.xdebug-error th,
+// table.xdebug-error td {
+// 	text-align: left;
+// 	vertical-align: middle;
+// }
+// table.xdebug-error a img {
+// 	border: 0;
+// }
+// table.xdebug-error :focus {
+// 	outline: 0;
+// }
+// table.xdebug-error pre {
+// 	margin: 0;
+// }
+// table.xdebug-error tbody tr td,
+// table.xdebug-error tbody tr th {
+// 	border: none;
+// 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+// 	font-weight: normal;
+// }
+// table.xdebug-error tbody tr td {
+// 	padding: 3px !important;
+// 	vertical-align: top;
+// }
+// table.xdebug-error tbody tr th {
+// 	padding: 13px !important;
+// }
+// table.xdebug-error tbody tr td:nth-of-type(1) {
+// 	width: 5% !important;
+// }
+// table.xdebug-error tbody tr th[bgcolor='#f57900'] {
+// 	font-weight: normal;
+// 	background: steelblue;
+// 	color: white;
+// }
+// table.xdebug-error tbody tr th[bgcolor='#f57900'] span {
+// 	display: none;
+// }
+// table.xdebug-error tbody tr font[color='#00bb00'] {
+// 	color: #005e00;
+// }
+// table.xdebug-error tbody tr td small {
+// 	display: none;
+// }
+// table.xdebug-error tbody tr td i {
+// 	padding-left: 12px;
+// }
+
+
+.xdebug-error-tab-container {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	background-color: #f2dede;
+	overflow-x: hidden;
+	transition: width 0.3s ease;
+	z-index: 9999;
+}
+
+.xdebug-error-tab-container.open {
+	width: 60%;
+}
+
+.xdebug-error-tab-toggle {
+	position: absolute;
+	right: 0;
+	top: 150px;
+	transform: translateY(-50%);
+	background-color: #f2dede;
+	border: 1px solid #ebccd1;
+	color: #a94442;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.xdebug-error-list {
+	padding: 0;
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+.xdebug-error-list li {
+	padding: 10px;
+	border-bottom: 1px solid #ebccd1;
+	white-space: pre-wrap;
+	overflow-x: scroll;
+}
+
+// Overlay
+.xdebug-error-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+	z-index: 9998;
+}
+
+.xdebug-error-overlay.visible {
+	opacity: 1;
+	visibility: visible;
+}

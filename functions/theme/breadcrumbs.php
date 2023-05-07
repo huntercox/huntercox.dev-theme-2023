@@ -2,6 +2,7 @@
 function custom_page_breadcrumbs()
 {
 	global $post;
+	global $wp;
 
 	$home_url = home_url('/');
 	$current_url = home_url(add_query_arg(array(), $wp->request));

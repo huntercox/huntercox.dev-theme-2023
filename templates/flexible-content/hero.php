@@ -39,7 +39,7 @@ echo ' }';
 echo '</style>';
 
 
-echo $stylesheet;
+// echo $stylesheet;
 
 $image = get_sub_field('image');
 

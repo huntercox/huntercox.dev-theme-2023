@@ -44,49 +44,8 @@ ol {
 		margin-top: 8px;
 	}
 }
-// Code / Preformatted
-pre,
-.pre,
-.code {
-	color: darken($green, 22%);
-	font-size: 20px;
-	line-height: 1.2;
-
-}
-
-// Blockquote
-blockquote {
-	padding: 2rem;
-	font-size: 20px;
-	line-height: 1.6;
 
 
-	>* {
-		line-height: 1.6;
-	}
-	&::before {
-		content: ""
-	}
-}
-// Italic
-i {
-	color: lighten($green, 18);
-	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 450, "slnt" -14, "CRSV" 0.25;
-}
-
-// Emphasis
-em {
-	color: lighten($pink, 12);
-	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 600, "slnt" -5, "CRSV" 1;
-}
-
-// Bold
-strong,
-b {
-	font-family: $font-family;
-	font-weight: bold;
-	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0.25;
-}
 
 // Headings
 h1,
@@ -176,4 +135,72 @@ h6 {
 	border-radius: 4px;
 	padding: 6px 6px 3px 8px;
 	margin-bottom: 15px;
+}
+
+// Italic
+i {
+	color: lighten($green, 18);
+	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 450, "slnt" -14, "CRSV" 0.25;
+}
+
+// Emphasis
+em {
+	color: lighten($pink, 12);
+	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 600, "slnt" -5, "CRSV" 1;
+}
+
+// Bold
+strong,
+b {
+	font-family: $font-family;
+	font-weight: bold;
+	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0.25;
+}
+
+// Code / Preformatted
+pre,
+.pre,
+.code {
+	color: darken($green, 22%);
+	font-size: 20px;
+	line-height: 1.2;
+
+}
+
+// Blockquote
+blockquote {
+	padding: 2rem;
+	font-size: 20px;
+	line-height: 1.6;
+
+
+	>* {
+		line-height: 1.6;
+	}
+	&::before {
+		content: ""
+	}
+}
+
+
+.xdebug-error {
+	th,
+	tr,
+	td {
+		font-size: 14px;
+		color: $dark;
+		padding: 4px;
+	}
+
+	i,
+	em,
+	b,
+	strong,
+	pre,
+	small,
+	font {
+		font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0;
+		color: $purple;
+		font-size: 14px;
+	}
 }

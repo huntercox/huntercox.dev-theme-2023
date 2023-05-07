@@ -2,7 +2,7 @@
 $layout_settings = [];
 $styles = [];
 
-$settings = get_sub_field('layout_settings');
+$settings = get_sub_field('settings');
 
 $color_settings = $settings['color_settings'];
 $spacing_settings = $settings['spacing_settings'];
@@ -103,8 +103,6 @@ foreach ($styles as $style) {
 }
 echo '</style>';
 
-
-echo $stylesheet;
 
 echo '<div class="content">';
 echo '<div class="container">';

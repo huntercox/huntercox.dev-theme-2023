@@ -34,6 +34,10 @@ if (have_rows('flex_layouts')) :
 			/* SECTION HEADING */
 			get_template_part('templates/flexible-content/section-heading');
 
+		elseif (get_row_layout() == 'columns') :
+			/* SECTION HEADING */
+			get_template_part('templates/flexible-content/columns');
+
 		endif;
 		echo '</div>';
 		echo '</section>';
