@@ -1,11 +1,13 @@
 <?php
 $column_1_content = get_sub_field('column_1_content');
 $column_2_content = get_sub_field('column_2_content');
+$column_3_content = get_sub_field('column_3_content');
 
 $columns = [];
 $columns['column_1'] = $column_1_content;
 $columns['column_2'] = $column_2_content;
-echo '<div class="container">';
+$columns['column_3'] = $column_3_content;
+
 echo '<div class="columns columns--' . esc_attr(count($columns)) . '">';
 $i = 0;
 foreach ($columns as $col => $content) {
@@ -16,5 +18,5 @@ foreach ($columns as $col => $content) {
 	echo '</div>';
 	echo '</div>';
 }
-echo '</div>';
-echo '</div>';
+?>
+</div>
