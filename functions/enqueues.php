@@ -17,6 +17,9 @@ function hsc_enqueue_styles_and_scripts()
 	wp_enqueue_style('hcdev2023-fontawesome-solid', get_template_directory_uri() . '/assets/dist/vendor/@fortawesome/fontawesome-free/css/solid.min.css');
 
 
+	/* Devicon */
+	wp_enqueue_style('hcdev2023-devicon', get_template_directory_uri() . '/assets/dist/vendor/devicon/devicon.min.css');
+
 
 	/* Parallax */
 	wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/dist/vendor/jquery-parallax.js/parallax.min.js', array('jquery'), '1.5.0', false);

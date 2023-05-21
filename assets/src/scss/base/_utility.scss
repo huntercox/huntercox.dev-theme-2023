@@ -50,7 +50,7 @@
 }
 
 .bg-img {
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: auto;
@@ -58,3 +58,12 @@
 }
 
 @import 'utility/_xdebug';
+
+.flex {
+	display: flex;
+}
+
+// Devicons
+i[class^=devicon-] {
+	font-size: 1.5rem;
+}

@@ -25,6 +25,7 @@ require get_template_directory() . '/functions/theme/template-conditions.php';
 require get_template_directory() . '/functions/theme/breadcrumbs.php';
 require get_template_directory() . '/functions/theme/body-class.php';
 require get_template_directory() . '/functions/theme/employers/employers.php';
+require get_template_directory() . '/functions/theme/theme.php';
 
 /* Theme > Admin */
 require get_template_directory() . '/functions/theme/admin/employer-start-date-column.php';

@@ -10,6 +10,14 @@
 		}
 	],
 	"require": {
-		"composer/installers": "~1.0"
+		"composer/installers": "~1.0",
+		"koodimonni/composer-dropin-installer": "^1.4",
+		"aaemnnosttv/wp-sqlite-db": "^1.3"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"koodimonni/composer-dropin-installer": true
+		}
 	}
 }

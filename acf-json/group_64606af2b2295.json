@@ -1,0 +1,72 @@
+{
+    "key": "group_64606af2b2295",
+    "title": "Skill Icon",
+    "fields": [
+        {
+            "key": "field_646044fb6cedf",
+            "label": "Devicon",
+            "name": "devicon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Go here https:\/\/devicon.dev\/ and find the class for the <i> tag to use for the icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "wordpress-plain",
+            "prepend": "devicon-",
+            "append": ""
+        },
+        {
+            "key": "field_6461228e2fcba",
+            "label": "Custom Image",
+            "name": "custom_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "skill"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1684087685
+}

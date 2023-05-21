@@ -23,6 +23,20 @@ function custom_page_breadcrumbs()
 
 		// Display current page without link
 		$breadcrumbs .= '<span>' . get_the_title() . '</span>';
+	} elseif (is_singular('skill')) {
+		$ancestors = get_post_ancestors($post);
+
+		// Display ancestor pages
+		if ($ancestors) {
+			$ancestors = array_reverse($ancestors);
+
+			foreach ($ancestors as $ancestor) {
+				$breadcrumbs .= '<li><a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a></li> &gt; ';
+			}
+		}
+
+		// Display current page without link
+		$breadcrumbs .= '<i>Skills</i>/<span>' . get_the_title() . '</span>';
 	}
 
 	if ($breadcrumbs) {

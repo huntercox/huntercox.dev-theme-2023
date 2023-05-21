@@ -1,5 +1,6 @@
 .footer {
-	background-color: $dark;
+	position: relative;
+	background-color: transparent;
 	border-top: 2px solid $green;
 	padding: 12px 0 10px 0;
 	text-align: center;
@@ -14,5 +15,19 @@
 	&__year {
 		font-size: 10px;
 		line-height: 0.95;
+	}
+
+	#ascii-logo {
+		position: relative;
+		top: -75%;
+		right: -5%;
+		opacity: 0.30;
+		z-index: -1;
+		text-align: left;
+
+		pre {
+			position: absolute;
+			font-size: 14px;
+		}
 	}
 }

@@ -42,6 +42,9 @@ $indigo: #001775;
 $purple: #514A8E;
 $green: #38D6B4;
 $pink: #FF7CC2;
+$yellow: #d0b628;
+$blue: #547cff;
+$red: #cb4155;
 
 
 // White, Light color
@@ -50,3 +53,124 @@ $light: rgba(235, 225, 240, 1);
 // Black, Dark color
 $black: #16023D;
 $dark: rgba(21, 2, 61, 1);
+
+
+
+/* Output color palette/swatches to front-end */
+.colors {
+	margin: 30px 0;
+	padding: 0px 0 25px 0;
+	border: 1px solid $white;
+
+	&::before {
+		content: "COLORS:";
+		background-color: $white;
+		color: $dark;
+		text-transform: uppercase;
+		position: relative;
+		top: 3px;
+		left: 0px;
+		padding: 3px 5px;
+	}
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		width: 80%;
+		margin: 0px auto 15px auto;
+		justify-content: space-between;
+
+		li {
+			span {
+				display: block;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				position: relative;
+				text-align: center;
+
+				&::after {
+					position: absolute;
+					bottom: -24px;
+					left: 0;
+					right: 0;
+					font-size: 14px;
+				}
+			}
+			&.purple span {
+				background-color: $purple;
+
+				&::after {
+					content: "purple";
+					color: $purple;
+				}
+			}
+			&.green span {
+				background-color: $green;
+
+				&::after {
+					content: "green";
+					color: $green;
+				}
+			}
+			&.pink span {
+				background-color: $pink;
+
+				&::after {
+					content: "pink";
+					color: $pink;
+				}
+			}
+			&.yellow span {
+				background-color: $yellow;
+
+				&::after {
+					content: "yellow";
+					color: $yellow;
+				}
+			}
+			&.blue span {
+				background-color: $blue;
+
+				&::after {
+					content: "blue";
+					color: $blue;
+				}
+			}
+			&.red span {
+				background-color: $red;
+
+				&::after {
+					content: "red";
+					color: $red;
+				}
+			}
+		}
+	}
+
+}
+
+$colors: (
+	#514A8E,
+	#38D6B4,
+	#FF7CC2,
+	#d0b628,
+	#547cff,
+	#cb4155
+);
+@mixin random-color() {
+	$index: random(length($colors));
+	$color: nth($colors, $index);
+	background-color: $color;
+}
+
+.color-label {
+	padding: 5px 6px 3px 8px;
+	margin-right: 5px;
+	line-height: 2;
+	color: $dark;
+	font-size: 22px;
+	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0.25;
+	text-shadow: 1px 1px 0px $white;
+	@include random-color();
+}

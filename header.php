@@ -48,14 +48,23 @@
 
 		<main class="content">
 			<?php
-			if (!is_front_page()) :
-				echo '<div class="page__header">';
+			$post_type = get_post_type();
+			if (!is_front_page() && is_singular()) :
+				echo '<div class="' . esc_attr($post_type) . '__header">';
 				echo '<div class="container">';
 				/* Breadcrumbs */
 				custom_page_breadcrumbs();
 
-				/* Page Title */
-				the_title('<h1 class="page__title">', '</h1>');
+				/* Post-type Title */
+				the_title('<h1 class="' . esc_attr($post_type) . '__title">', '</h1>');
+				echo '</div>';
+				echo '</div>';
+
+			elseif (is_post_type_archive()) :
+				echo '<div class="' . esc_attr($post_type) . '__header">';
+				echo '<div class="container">';
+				/* Post-type Title */
+				echo '<h1 class="' . esc_attr($post_type) . '__title">' . post_type_archive_title('', false) . '</h1>';
 				echo '</div>';
 				echo '</div>';
 			endif;

@@ -24,27 +24,13 @@ a:active {
 	}
 }
 
-// Lists
-ul,
-ol {
-	margin-bottom: 8px;
-	padding-bottom: 10px;
-
-	ul,
-	ol {
-		padding-bottom: 2px;
-	}
-
+ul {
+	list-style-type: none;
+	padding-left: 0;
 	li {
-		font-size: 20px;
-		line-height: 1.1;
-		margin-bottom: 8px;
-	}
-	>li:first-child {
-		margin-top: 8px;
+		margin: 0;
 	}
 }
-
 
 
 // Headings
@@ -66,24 +52,6 @@ h1 {
 	color: $green;
 	text-shadow: 1px 0px 0px $pink;
 	border-bottom: 2px solid $pink;
-
-	&.page__title {
-		color: $white;
-		font-size: 3.4rem;
-		font-weight: 400;
-		letter-spacing: 3px;
-		font-variation-settings: "MONO" 0, "CASL" 1, "wght" 900, "slnt" 0, "CRSV" 1;
-		text-shadow: 2px 2px 0px $pink;
-		border-bottom: none;
-		margin-bottom: 0;
-
-		&::selection {
-			background-color: $pink;
-			color: $indigo;
-		}
-	}
-
-	&.alt {}
 }
 
 h2 {
@@ -155,6 +123,32 @@ b {
 	font-family: $font-family;
 	font-weight: bold;
 	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0.25;
+}
+
+
+// Lists
+.wysiwyg {
+
+	ul,
+	ol {
+		padding-left: 30px;
+		margin-bottom: 8px;
+		padding-bottom: 10px;
+
+		ul,
+		ol {
+			padding-bottom: 2px;
+		}
+
+		li {
+			font-size: 20px;
+			line-height: 1.1;
+			margin-bottom: 8px;
+		}
+		>li:first-child {
+			margin-top: 8px;
+		}
+	}
 }
 
 // Code / Preformatted

@@ -2,9 +2,13 @@
 <div class="page__content">
 	<div class="container">
 		<div class="page__wysiwyg">
+
+			<?php hsc_output_color_palette(); ?>
+
 			<?php the_content(); ?>
 		</div>
 	</div>
+
 
 	<div class="page__content--styles">
 
