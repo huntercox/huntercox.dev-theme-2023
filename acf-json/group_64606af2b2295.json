@@ -18,9 +18,9 @@
             },
             "default_value": "",
             "maxlength": "",
-            "placeholder": "wordpress-plain",
+            "placeholder": "wordpress",
             "prepend": "devicon-",
-            "append": ""
+            "append": "-plain"
         },
         {
             "key": "field_6461228e2fcba",
@@ -68,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684087685
+    "modified": 1685075236
 }

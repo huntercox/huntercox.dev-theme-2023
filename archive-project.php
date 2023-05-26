@@ -5,8 +5,18 @@ get_header();
 <div class="page__content">
 	<div class="container">
 		<?php
+
+		$projects_page = get_post(314);
+
+
+
+		echo '<div class="projects-page__content">';
+		echo $projects_page->post_content;
+		echo '</div>';
+
+
 		if (have_posts()) :
-			echo '<ul class="skill__list">';
+			echo '<ul class="project__list">';
 
 			$count = $wp_query->found_posts;
 			$current = 1;
@@ -14,7 +24,7 @@ get_header();
 			while (have_posts()) :
 				the_post();
 		?>
-				<li class="skill">
+				<li class="project">
 					<?php
 					if ($current < $count) {
 						echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a>, &nbsp; </h4>';

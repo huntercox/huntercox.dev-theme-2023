@@ -1,0 +1,45 @@
+{
+    "key": "group_6470ea968e28f",
+    "title": "Date",
+    "fields": [
+        {
+            "key": "field_6470ea972fdb2",
+            "label": "Appoximate Date",
+            "name": "appoximate_date",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 4,
+            "placeholder": 2011,
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Project - Dates",
+    "show_in_rest": 0,
+    "modified": 1685121784
+}

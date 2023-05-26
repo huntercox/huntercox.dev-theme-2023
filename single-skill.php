@@ -13,7 +13,7 @@ echo '<div class="' . esc_attr($post_type) . '__content">';
 			$devicon = get_field('devicon');
 			if ($devicon) {
 				echo '<div class="skill__icon">';
-				echo '<i class="devicon-' . esc_attr($devicon) . '"></i>';
+				echo '<i class="devicon-' . esc_attr($devicon) . '-plain"></i>';
 				echo '</div>';
 			} elseif (get_field('custom_image')) {
 				$size = 'medium';
