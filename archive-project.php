@@ -18,24 +18,20 @@ get_header();
 		if (have_posts()) :
 			echo '<ul class="project__list">';
 
-			$count = $wp_query->found_posts;
-			$current = 1;
-
 			while (have_posts()) :
 				the_post();
-		?>
-				<li class="project">
-					<?php
-					if ($current < $count) {
-						echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a>, &nbsp; </h4>';
-					} else {
-						echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-					}
-					?>
-				</li>
-		<?php
 
-				$current++;
+				echo '<li class="project">';
+
+				$date = get_field('project_date');
+
+				if ($date) {
+					echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a>, <span>' . $date . '</span></h4>';
+				} else {
+					echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a>, </h4>';
+				}
+
+				echo '</li>';
 
 			endwhile;
 			echo '</ul>';
