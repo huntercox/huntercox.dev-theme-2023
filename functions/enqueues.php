@@ -21,12 +21,32 @@ function hsc_enqueue_styles_and_scripts()
 	wp_enqueue_style('hcdev2023-devicon', get_template_directory_uri() . '/assets/dist/vendor/devicon/devicon.min.css');
 
 
+	/**
+	 * =========
+	 * SCRIPTS
+	 * =========
+	 */
+
 	/* Parallax */
-	wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/dist/vendor/jquery-parallax.js/parallax.min.js', array('jquery'), '1.5.0', false);
+	wp_enqueue_script('hscdev2023-parallax', get_template_directory_uri() . '/assets/dist/vendor/jquery-parallax.js/parallax.min.js', array('jquery'), '1.5.0', false);
 	// wp_enqueue_script('parallax');
 
 	/* Enqueue Xdebug plugin */
-	wp_enqueue_script('xdebug-error-tab', get_template_directory_uri() . '/assets/src/js/xdebug-error-tab.js', array('jquery'), '1.0.0', false);
+	wp_enqueue_script('hscdev2023-xdebug-error-tab', get_template_directory_uri() . '/assets/src/js/xdebug-error-tab.js', array('jquery'), '1.0.0', false);
+
+	/* Project Archive - Category, Date Filters */
+	if (is_archive('project')) {
+		wp_register_script('hscdev2023-projects-filters', get_template_directory_uri() . '/assets/src/js/projects-filters.js', array('jquery'), '1.0.0', false);
+
+		wp_enqueue_script('hscdev2023-projects-filters');
+		wp_localize_script(
+			'hscdev2023-projects-filters',
+			'hsc_projects_filters',
+			array(
+				'ajaxurl' => admin_url('admin-ajax.php'),
+			)
+		);
+	}
 }
 
 add_action('wp_enqueue_scripts', 'hsc_enqueue_styles_and_scripts');

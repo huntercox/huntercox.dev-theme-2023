@@ -2,22 +2,26 @@ div[class$=__header] {
 	margin: 2rem 0 2rem 0;
 }
 
-[class$=__title] {
-	color: $white;
-	font-size: 3.4rem;
-	font-weight: 400;
-	letter-spacing: 3px;
-	font-variation-settings: "MONO" 0, "CASL" 1, "wght" 900, "slnt" 0, "CRSV" 1;
-	text-shadow: 2px 2px 0px $pink;
-	border-bottom: none;
-	margin-bottom: 0;
+[class$=__header] {
+	[class$=__title] {
+		color: $white;
+		font-size: 3.4rem;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-variation-settings: "MONO" 0, "CASL" 1, "wght" 900, "slnt" 0, "CRSV" 1;
+		text-shadow: 2px 2px 0px $pink;
+		border-bottom: none;
+		margin-bottom: 0;
 
-	&::selection {
-		background-color: $pink;
-		color: $indigo;
+		&::selection {
+			background-color: $pink;
+			color: $indigo;
+		}
 	}
 }
+
 
 @import './pages/pages';
 @import './skills/skills';
 @import './skills/archive-skills';
+@import './projects/archive-projects';

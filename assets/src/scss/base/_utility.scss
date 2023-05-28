@@ -61,9 +61,46 @@
 
 .flex {
 	display: flex;
+
+	>li,
+	div {
+		padding-right: 15px;
+	}
 }
 
 // Devicons
 i[class^=devicon-] {
 	font-size: 1.5rem;
+}
+
+.label {
+	padding: 8px 12px 7px 13px;
+	background-color: rgba($white, 0.05);
+	border: 1px solid $purple;
+
+	&:hover {
+		background-color: rgba($white, 0.10);
+		cursor: pointer;
+	}
+
+	&--active {
+		background-color: $purple;
+		border: 1px solid $pink;
+
+		&:hover {
+			background-color: $purple;
+			cursor: default;
+		}
+
+		a {
+			cursor: default;
+		}
+	}
+
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
