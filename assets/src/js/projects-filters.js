@@ -6,7 +6,8 @@ jQuery(document).ready(function ($) {
 		$(this).parent().addClass('label--active');
 		let catSlug = $(this).data('slug');
 
-		filterProjectsByCategory(catSlug);
+		// filterProjectsByCategory(catSlug);
+		filterProjects(catSlug);
 	});
 
 
@@ -16,7 +17,7 @@ jQuery(document).ready(function ($) {
 		$(this).parent().addClass('label--active');
 		let dateSlug = $(this).data('slug');
 
-		filterProjectsByDate(dateSlug);
+		// filterProjectsByDate(dateSlug);
 	});
 
 });
@@ -55,4 +56,22 @@ function filterProjectsByDate(dateSlug) {
 		}
 	})
 
+}
+
+function filterProjects(slug) {
+	console.log(dateSlug);
+
+	jQuery.ajax({
+		type: 'POST',
+		url: hsc_projects_filters.ajaxurl,
+		dataType: 'html',
+		data: {
+			action: 'hsc_projects_filters',
+			date: dateSlug,
+			category: catSlug
+		},
+		success: function (res) {
+			jQuery('.projects__list-items').html(res);
+		}
+	})
 }
