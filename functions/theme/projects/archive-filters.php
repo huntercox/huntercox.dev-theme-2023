@@ -37,10 +37,6 @@ function hsc_filter_projects_by_category()
 
 		if ($ajaxposts->have_posts()) {
 			while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
-				// $response .= '<li class="project">';
-				// $response .= '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-				// $response .= '</li>';
-
 				$response .= get_template_part('parts/post', 'project');
 			endwhile;
 		} else {
@@ -65,13 +61,14 @@ function hsc_filter_projects_by_date()
 
 	$response = '';
 
-	if ($date_year == "all") {
+	if ($date_year == "any") {
 		/* ALL PROJECTS */
 		$ajaxposts = new WP_Query([
 			'post_type' => 'project',
 			'posts_per_page' => -1,
 			'order' => 'asc',
 		]);
+
 		if ($ajaxposts->have_posts()) {
 			while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
 
