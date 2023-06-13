@@ -36,6 +36,28 @@
 	}
 }
 
+#response {
+	margin-top: 20px;
+	border-top: 2px solid $yellow;
+	padding-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+
+	.project {
+		border: 1px solid $white;
+		padding: 10px;
+
+		h4 {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+
+		&__date {
+			color: $yellow;
+		}
+	}
+}
 
 .projects__list {
 	&-items {

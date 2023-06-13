@@ -13,65 +13,8 @@ get_header();
 		echo '</div>';
 		?>
 
-		<!-- <div class="projects__filters" id="projects-filters">
-			<div class="projects__filters--category">
-				<?php
-				// $args = array(
-				// 	'post_type' => 'project',
-				// 	'post_status' => 'publish',
-				// 	'posts_per_page' => -1,
-				// );
-				// $posts = get_posts($args);
-
-				// // Collect all post IDs
-				// $post_ids = array();
-				// foreach ($posts as $post) {
-				// 	$post_ids[] = $post->ID;
-				// }
-
-				// // Fetch the terms related to these posts
-				// $categories = wp_get_object_terms($post_ids, 'category', array(
-				// 	'hide_empty' => true,
-				// ));
-				?>
-				<ul class="cat-list flex" style="justify-content: space-between;">
-					<li class="label label--active"><a class="cat-list_item" href="#!" data-slug="all">All Projects</a></li>
-
-					<?php
-					// foreach ($categories as $category) :
-					// 	if (is_object($category)) {
-					// 		if ($category->slug == 'uncategorized') {
-					// 			continue;
-					// 		}
-					?>
-							<li class="label">
-								<a class="cat-list_item" href="#!" data-slug="<?= $category->slug; ?>"><?= $category->name; ?></a>
-							</li>
-					<?php //}
-					//endforeach;
-					?>
-				</ul>
-			</div>
-
-			<div class="projects__filters--date">
-				<ul class="date-list flex">
-					<li class="label label--active"><a class="date-list_item" href="#!" data-slug="any">Any Time</a></li>
-
-					<li class="label">
-						<a class="date-list_item" href="#!" data-slug="2016">2016</a>
-					</li>
-					<li class="label">
-						<a class="date-list_item" href="#!" data-slug="2017">2017</a>
-					</li>
-					<li class="label">
-						<a class="date-list_item" href="#!" data-slug="2018">2018</a>
-					</li>
-				</ul>
-			</div>
-		</div> -->
-
 		<div class="projects__filters">
-			<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" class="projects__filters__form" id="projects-filters-form">
+			<form id="myform" method="POST">
 				<?php
 				$args = array(
 					'post_type' => 'project',
@@ -94,7 +37,7 @@ get_header();
 					<legend>By Category:</legend>
 
 					<label>
-						<input type="checkbox" name="all" id="category-all" checked /> All Projects
+						<input type="checkbox" name="all" id="category-all" checked /> All
 					</label>
 
 					<?php
@@ -119,47 +62,52 @@ get_header();
 						<input type="checkbox" name="any" id="date-any" checked /> Any
 					</label>
 					<label>
-						<input type="checkbox" name="dateFilter" id="date-2016" /> 2016
+						<input type="checkbox" name="2016" id="date-2016" /> 2016
 					</label>
 					<label>
-						<input type="checkbox" name="dateFilter" id="date-2017" /> 2017
+						<input type="checkbox" name="2017" id="date-2017" /> 2017
 					</label>
 					<label>
-						<input type="checkbox" name="dateFilter" id="date-2018" /> 2018
+						<input type="checkbox" name="2018" id="date-2018" /> 2018
 					</label>
 				</fieldset>
-
-				<button>Apply</button>
-				<input type="hidden" name="action" value="projectsfilter">
 			</form>
 		</div>
 
-		<div id="projects-response"></div>
+		<!-- <form>
+			<label for="filtered">
+				<input type="checkbox" name="filtered" id="checkbox_filtered">
+				Filtered?
+			</label>
+		</form> -->
 
-		<!-- <div class="projects__list">
+		<div id="response">
 			<?php
-			// $projects = new WP_Query([
-			// 	'post_type' => 'project',
-			// 	'posts_per_page' => -1,
-			// 	'order_by' => 'date',
-			// 	'order' => 'ASC',
-			// ]);
+			$args = array(
+				'post_type' => 'project',
+				'post_status' => 'publish',
+				'posts_per_page' => -1,
+				'order' => 'asc',
+			);
+
+			$projects = new WP_Query($args);
+			while ($projects->have_posts()) : $projects->the_post();
+				$id = get_post_field('ID');
+				echo '<div class="project project--' . $id . '">';
+				echo '<h4><a href="' . get_permalink() . '">' . get_the_title() . '</a></h4>';
+				// Category
+				$terms = wp_get_post_terms($projects->post->ID, array('category'));
+				foreach ($terms as $term) :
+					echo '<div class="project__category">' . $term->name . '</div>';
+				endforeach;
+
+				// Date
+				echo '<div class="project__date">' . get_field('project_date') . '</div>';
+				echo '</div>';
+			endwhile;
 			?>
 
-			<?php //if ($projects->have_posts()) :
-			?>
-				<ul class="projects__list-items">
-					<?php
-					// while ($projects->have_posts()) : $projects->the_post();
-					// 	include('parts/post-project.php');
-					// endwhile;
-					?>
-				</ul>
-				<?php //wp_reset_postdata();
-				?>
-			<?php //endif;
-			?>
-		</div> -->
+		</div>
 
 	</div>
 

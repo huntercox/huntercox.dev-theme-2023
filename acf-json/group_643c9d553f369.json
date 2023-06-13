@@ -59,32 +59,6 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_645317ac7ec11",
-                    "label": "Start Date",
-                    "name": "start_date",
-                    "aria-label": "",
-                    "type": "date_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_645319fdf90d5",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "m\/d\/Y",
-                    "return_format": "m\/d\/Y",
-                    "first_day": 1
-                },
-                {
                     "key": "field_64530d1f07511",
                     "label": "Length of Employment",
                     "name": "length_of_employment",
@@ -149,6 +123,162 @@
                             "append": "months"
                         }
                     ]
+                },
+                {
+                    "key": "field_645317ac7ec11",
+                    "label": "Start Date",
+                    "name": "start_date",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_6486302af153e",
+                            "label": "Month",
+                            "name": "month",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "60",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "January": "January",
+                                "February": "February",
+                                "March": "March",
+                                "April": "April",
+                                "May": "May",
+                                "June": "June",
+                                "July": "July",
+                                "August": "August",
+                                "September": "September",
+                                "October": "October",
+                                "November": "November",
+                                "December": "December"
+                            },
+                            "default_value": "January",
+                            "return_format": "",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6486306cf153f",
+                            "label": "Year",
+                            "name": "year",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": 4,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_648630a9f1540",
+                    "label": "End Date",
+                    "name": "end_date",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_645319fdf90d5",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_648630a9f1541",
+                            "label": "Month",
+                            "name": "month",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "60",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "January": "January",
+                                "February": "February",
+                                "March": "March",
+                                "April": "April",
+                                "May": "May",
+                                "June": "June",
+                                "July": "July",
+                                "August": "August",
+                                "September": "September",
+                                "October": "October",
+                                "November": "November",
+                                "December": "December"
+                            },
+                            "default_value": "January",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_648630a9f1542",
+                            "label": "Year",
+                            "name": "year",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": 4,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -193,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683440332
+    "modified": 1686515957
 }

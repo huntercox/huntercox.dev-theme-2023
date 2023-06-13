@@ -106,6 +106,8 @@ echo '</style>';
 
 echo '<div class="content">';
 echo '<div class="container">';
+echo '<div class="content__text-editor">';
 the_sub_field('text_content');
+echo '</div>';
 echo '</div>';
 echo '</div>';

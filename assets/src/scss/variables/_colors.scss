@@ -158,19 +158,22 @@ $colors: (
 	#547cff,
 	#cb4155
 );
-@mixin random-color() {
-	$index: random(length($colors));
-	$color: nth($colors, $index);
-	background-color: $color;
+
+@mixin random-color-li() {
+	@for $i from 1 through $repeat {
+		li:nth-child(#{length($colors)}n+#{$i}) {
+			background: lighten(nth($colors, random(length($colors))), 20%);
+		}
+	}
 }
 
 .color-label {
-	padding: 5px 6px 3px 8px;
+	padding: 6px 10px 4px 10px;
 	margin-right: 5px;
-	line-height: 2;
-	color: $dark;
+	line-height: 1.2;
 	font-size: 22px;
 	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0.25;
-	text-shadow: 1px 1px 0px $white;
-	@include random-color();
+	font-size: 20px;
+	font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0.25;
+	border-radius: 4px;
 }

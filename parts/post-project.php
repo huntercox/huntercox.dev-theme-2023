@@ -16,6 +16,7 @@
 		if ($cats) {
 			echo '<span class="project__category">' . implode('', $cats) . '</span>';
 		}
+
 		?>
 	</div>
 </li>
