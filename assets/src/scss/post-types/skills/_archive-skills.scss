@@ -1,7 +1,17 @@
 .post-type-archive-skill {
-	.skill {
-		&__list {
+	ul {
+
+		&.label-list {
+			list-style-type: none;
 			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				@extend .color-label;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				color: $dark;
+			}
 		}
 	}
 }
