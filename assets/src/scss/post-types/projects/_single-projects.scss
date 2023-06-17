@@ -1,0 +1,81 @@
+.single-project {
+
+	.project {
+
+		// Date
+		&__date {
+			margin-bottom: 4px;
+			strong {
+				font-size: 1rem;
+				font-weight: 300;
+				color: $yellow;
+			}
+		}
+
+		// Category
+		&__category {
+			margin-bottom: 5px;
+			strong {
+				font-size: 1rem;
+				font-weight: 300;
+				color: $pink;
+			}
+		}
+
+		// Skills
+		&__skills {
+			strong {
+				font-size: 1rem;
+				font-weight: 300;
+				color: $green;
+			}
+			ul {
+				display: inline;
+				margin: 0;
+				li {
+					display: inline;
+					padding-right: 4px;
+					&::after {
+						content: ", ";
+
+					}
+					&:last-child {
+						&::after {
+							content: "";
+						}
+					}
+				}
+			}
+		}
+
+		// Description
+		&__description {
+			margin-top: 20px;
+		}
+
+		&__contributions {
+			h6 {
+				margin-top: 20px;
+			}
+			ul {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				li {
+					border: 1px solid $green;
+					text-align: left;
+					align-self: flex-start;
+					width: 80%;
+					margin-bottom: 15px;
+					padding: 11px 10px 10px 10px;
+
+					&:nth-child(odd) {
+						text-align: right;
+						align-self: flex-end;
+					}
+				}
+			}
+		}
+	}
+}

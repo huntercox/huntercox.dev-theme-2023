@@ -6,34 +6,55 @@ get_header();
 	<?php
 	echo '<div class="' . esc_attr($post_type) . '__content">';
 	?>
+	<div class="project__meta">
+		<div class="project__date">
+			<strong>Date:</strong> <?php the_field('project_date'); ?>
+		</div>
 
-	<div>
-		<strong>Date:</strong> <?php the_field('project_date'); ?>
+		<div class="project__category">
+			<?php
+			$categories = get_terms();
+			$categories = get_the_terms($post->ID, 'category');
+
+			$categories = array_map(function ($category) {
+				return $category->name;
+			}, $categories);
+			?>
+			<strong>Category: </strong> <?php echo $categories[0]; ?>
+		</div>
+
+		<div class="project__skills">
+			<strong>Skills: </strong>
+			<?php
+			$skills = get_field('skills');
+			if ($skills) {
+				echo '<ul>';
+				foreach ($skills as $skill) {
+					echo '<li>' . $skill->post_title . '</li>';
+				}
+				echo '</ul>';
+			}
+			?>
+		</div>
 	</div>
 
-	<div>
-		<?php
-		$categories = get_terms();
-		$categories = get_the_terms($post->ID, 'category');
-
-		$categories = array_map(function ($category) {
-			return $category->name;
-		}, $categories);
-		?>
-		<strong>Category:</strong> <?php echo $categories[0]; ?>
+	<div class="project__description">
+		<?php the_content(); ?>
 	</div>
 
-	<div>
-		<strong>Skills:</strong>
+	<div class="project__contributions">
+		<h6>Contributions</h6>
 		<?php
-		$skills = get_field('skills');
-		foreach ($skills as $skill) {
-			echo '<span>' . $skill . '</span>';
+		$contributions = get_field('contributions');
+		if ($contributions) {
+			echo '<ul>';
+			foreach ($contributions as $contribution) {
+				echo '<li>' . $contribution['description'] . '</li>';
+			}
+			echo '</ul>';
 		}
 		?>
 	</div>
-
-	<?php the_content(); ?>
 </div>
 </div>
 <?php
