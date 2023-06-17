@@ -2,6 +2,11 @@
 
 	.project {
 
+		&__meta {
+			padding-bottom: 10px;
+			border-bottom: 1px solid $purple;
+		}
+
 		// Date
 		&__date {
 			margin-bottom: 4px;
@@ -24,6 +29,7 @@
 
 		// Skills
 		&__skills {
+			margin-bottom: 5px;
 			strong {
 				font-size: 1rem;
 				font-weight: 300;
@@ -35,9 +41,9 @@
 				li {
 					display: inline;
 					padding-right: 4px;
+
 					&::after {
 						content: ", ";
-
 					}
 					&:last-child {
 						&::after {

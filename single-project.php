@@ -36,6 +36,18 @@ get_header();
 			}
 			?>
 		</div>
+
+		<?php
+		$project_link = get_field('project_link');
+
+		if ($project_link) {
+		?>
+			<div class="project__link">
+				<strong>Link: </strong><a href="<?php echo esc_url($project_link); ?>" target="_blank">View Project</a>
+			</div>
+		<?php
+		}
+		?>
 	</div>
 
 	<div class="project__description">
