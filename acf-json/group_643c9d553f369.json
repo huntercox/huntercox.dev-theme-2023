@@ -59,72 +59,6 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_64530d1f07511",
-                    "label": "Length of Employment",
-                    "name": "length_of_employment",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_645319fdf90d5",
-                                "operator": "!=",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_64530d3a07512",
-                            "label": "Years",
-                            "name": "years",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": 2,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "years"
-                        },
-                        {
-                            "key": "field_64530d6d07513",
-                            "label": "Months",
-                            "name": "months",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": 2,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "months"
-                        }
-                    ]
-                },
-                {
                     "key": "field_645317ac7ec11",
                     "label": "Start Date",
                     "name": "start_date",
@@ -279,6 +213,72 @@
                             "append": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_64530d1f07511",
+                    "label": "Length of Employment",
+                    "name": "length_of_employment",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_645319fdf90d5",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_64530d3a07512",
+                            "label": "Years",
+                            "name": "years",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": 2,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "years"
+                        },
+                        {
+                            "key": "field_64530d6d07513",
+                            "label": "Months",
+                            "name": "months",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": 2,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "months"
+                        }
+                    ]
                 }
             ]
         },
@@ -323,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686515957
+    "modified": 1687027841
 }
