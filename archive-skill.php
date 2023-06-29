@@ -5,6 +5,16 @@ get_header();
 <div class="page__content">
 	<div class="container">
 		<div class="skill-archive-container">
+			<div class="skills-page__content">
+				<?php
+				$skills_page = get_post(302);
+
+				echo '<div class="skills-page__content">';
+				echo $skills_page->post_content;
+				echo '</div>';
+				?>
+			</div>
+			
 			<?php
 			$color_counter = 0;
 			$colors = hsc_get_colors();

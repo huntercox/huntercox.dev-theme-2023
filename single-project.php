@@ -8,7 +8,7 @@ get_header();
 	?>
 	<div class="project__meta">
 		<div class="project__date">
-			<strong>Date:</strong> <?php the_field('project_date'); ?>
+			<strong>Date: </strong><?php the_field('project_date'); ?>
 		</div>
 
 		<div class="project__category">
@@ -20,7 +20,7 @@ get_header();
 				return $category->name;
 			}, $categories);
 			?>
-			<strong>Category: </strong> <?php echo $categories[0]; ?>
+			<strong>Category: </strong><?php echo $categories[0]; ?>
 		</div>
 
 		<div class="project__skills">

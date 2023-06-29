@@ -10,26 +10,26 @@
 				display: block;
 				text-align: center;
 				text-transform: uppercase;
-				color: $yellow;
+				color: var($yellow);
 
 				&:hover {
-					background-color: rgba($yellow, 0.02)
+					// background-color: rgba(var($yellow), 0.02)
 				}
 			}
 
 			&--active {
-				background-color: $yellow;
-				border: 1px solid $yellow;
-				color: $dark;
+				background-color: var($yellow);
+				border: 1px solid var($yellow);
+				color: var($dark);
 
 				&:hover {
-					background-color: $yellow;
+					background-color: var($yellow);
 					cursor: default;
 				}
 
 				a {
 					cursor: default;
-					color: $dark;
+					color: var($dark);
 				}
 			}
 		}
@@ -38,7 +38,7 @@
 
 #response {
 	margin-top: 20px;
-	border-top: 2px solid $yellow;
+	border-top: 2px solid var($yellow);
 	padding-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -54,7 +54,7 @@
 		}
 
 		&__date {
-			color: $yellow;
+			color: var($yellow);
 		}
 	}
 }
@@ -66,8 +66,8 @@
 		gap: 20px;
 
 		.project {
-			background-color: rgba($dark, 0.20);
-			border: 1px solid rgba($white, 0.75);
+			// background-color: rgba(var($dark), 0.20);
+			// border: 1px solid rgba($white, 0.75);
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -80,7 +80,7 @@
 				margin-bottom: 0;
 
 				a {
-					color: $green;
+					color: var($green);
 				}
 
 			}
@@ -91,7 +91,7 @@
 				align-items: center;
 				justify-content: space-between;
 				flex-direction: row-reverse;
-				border-top: 1px solid rgba($white, 0.75);
+				// border-top: 1px solid rgba($white, 0.75);
 				padding: 4px 0 3px 0;
 			}
 			&__date {
@@ -102,7 +102,7 @@
 			}
 			&__category {
 				padding-left: 12px;
-				color: $yellow;
+				color: var($yellow);
 				font-size: 16px;
 				text-transform: uppercase;
 			}

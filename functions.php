@@ -31,3 +31,9 @@ require get_template_directory() . '/functions/theme/theme.php';
 
 /* Theme > Admin */
 require get_template_directory() . '/functions/theme/admin/employer-start-date-column.php';
+
+/* Theme > Projects */
+require get_template_directory() . '/functions/theme/projects/register-projects.php';
+
+/* API */
+// require get_template_directory() . '/api/projects/update-post-type.php';

@@ -4,7 +4,7 @@
 
 		&__meta {
 			padding-bottom: 10px;
-			border-bottom: 1px solid $purple;
+			border-bottom: 1px solid var($purple);
 		}
 
 		// Date
@@ -13,7 +13,7 @@
 			strong {
 				font-size: 1rem;
 				font-weight: 300;
-				color: $yellow;
+				color: var($yellow);
 			}
 		}
 
@@ -23,7 +23,7 @@
 			strong {
 				font-size: 1rem;
 				font-weight: 300;
-				color: $pink;
+				color: var($pink);
 			}
 		}
 
@@ -33,7 +33,7 @@
 			strong {
 				font-size: 1rem;
 				font-weight: 300;
-				color: $green;
+				color: var($green);
 			}
 			ul {
 				display: inline;
@@ -69,7 +69,7 @@
 				flex-direction: column;
 
 				li {
-					border: 1px solid $green;
+					border: 1px solid var($green);
 					text-align: left;
 					align-self: flex-start;
 					width: 80%;

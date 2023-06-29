@@ -1,22 +1,22 @@
 input,
 textarea {
 	padding-top: 4px;
-	background-color: $dark;
+	background-color: var($dark);
 	box-shadow: none;
 	outline: none;
 	border: none;
-	border: 1px solid $green;
+	border: 1px solid var($green);
 	border-radius: 3px;
 	text-transform: uppercase;
 	color: $white;
 
 	&::selection {
-		background-color: $pink;
+		background-color: var($pink);
 	}
 
 	&:focus {
-		border-color: lighten($green, 10%);
-		box-shadow: 0 0 1px $green, 0 0 2px $green, 0 0 3px $green;
+		// border-color: lighten(var($green), 10%);
+		box-shadow: 0 0 1px var($green), 0 0 2px var($green), 0 0 3px var($green);
 		outline: none;
 	}
 }
@@ -43,8 +43,8 @@ textarea {
 		line-height: 1;
 
 		&::selection {
-			color: $dark;
-			background-color: $green;
+			color: var($dark);
+			background-color: var($green);
 		}
 	}
 	.gfield_label {
@@ -59,7 +59,7 @@ textarea {
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			margin-bottom: 3px;
-			color: $dark;
+			color: var($dark);
 		}
 		.gfield_description {
 			display: none;

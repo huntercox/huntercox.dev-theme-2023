@@ -8,12 +8,13 @@
 	box-sizing: border-box;
 }
 *::selection {
-	color: $indigo;
-	background-color: rgba($pink, 80%);
+	color: var($indigo);
+	background-color: var($pink);
 }
 html {
-	background-color: $background_color;
-	color: $green;
+	// background-color: $background_color;
+	background-color: var($dark);
+	color: $white;
 }
 body,
 h1,

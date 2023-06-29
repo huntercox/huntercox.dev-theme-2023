@@ -9,20 +9,20 @@ div[class$=__header] {
 		font-weight: 400;
 		letter-spacing: 3px;
 		font-variation-settings: "MONO" 0, "CASL" 1, "wght" 900, "slnt" 0, "CRSV" 1;
-		text-shadow: 2px 2px 0px $pink;
+		text-shadow: 2px 2px 0px var($pink);
 		border-bottom: none;
 		margin-bottom: 0;
 
 		&::selection {
-			background-color: $pink;
-			color: $indigo;
+			background-color: var($pink);
+			color: var($indigo);
 		}
 	}
 }
 
 
 @import './pages/pages';
-@import './skills/skills';
 @import './skills/archive-skills';
+@import './skills/single-skills';
 @import './projects/archive-projects';
 @import './projects/single-projects';

@@ -18,7 +18,7 @@ p {
 a,
 a:visited,
 a:active {
-	color: $pink;
+	color: var($pink);
 	font-family: $font-family;
 	text-decoration: none;
 
@@ -51,7 +51,7 @@ ul {
 			li {
 				@extend .color-label;
 				margin-right: 10px;
-				color: $dark;
+				color: var($dark);
 			}
 		}
 	}
@@ -65,7 +65,7 @@ h4,
 h5,
 h6 {
 	line-height: 1.4;
-	color: $green;
+	color: var($green);
 }
 h1 {
 	font-weight: normal;
@@ -73,9 +73,9 @@ h1 {
 	font-size: 2.8rem;
 	font-weight: 800;
 	margin-bottom: 15px;
-	color: $green;
-	text-shadow: 1px 0px 0px $pink;
-	border-bottom: 2px solid $pink;
+	color: var($green);
+	text-shadow: 1px 0px 0px var($pink);
+	border-bottom: 2px solid var($pink);
 }
 
 h2 {
@@ -83,9 +83,9 @@ h2 {
 	font-family: $font-family;
 	font-size: 2.2rem;
 	line-height: 1.2;
-	color: $dark;
-	background-color: $green;
-	border: 1px solid $green;
+	color: var($dark);
+	background-color: var($green);
+	border: 1px solid var($green);
 	border-radius: 5px;
 	padding: 10px 16px 7px 16px;
 	margin-bottom: 20px;
@@ -115,15 +115,15 @@ h5 {
 	font-family: $font-family;
 	font-variation-settings: "MONO" 0, "CASL" 1, "wght" 900, "slnt" -14, "CRSV" 1;
 	margin-bottom: 15px;
-	color: $pink;
+	color: var($pink);
 }
 h6 {
 	font-weight: normal;
 	font-family: $font-family;
 	font-size: 20px;
-	background-color: rgba($green, 0.05);
+	// background-color: rgba(var($green), 0.05);
 	text-transform: uppercase;
-	border: 1px solid $green;
+	border: 1px solid var($green);
 	border-radius: 4px;
 	padding: 6px 6px 3px 8px;
 	margin-bottom: 15px;
@@ -131,13 +131,13 @@ h6 {
 
 // Italic
 i {
-	color: lighten($green, 18);
+	// color: lighten(var($green), 18);
 	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 450, "slnt" -14, "CRSV" 0.25;
 }
 
 // Emphasis
 em {
-	color: lighten($pink, 12);
+	// color: lighten(var($pink), 12);
 	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 600, "slnt" -5, "CRSV" 1;
 }
 
@@ -179,7 +179,7 @@ b {
 pre,
 .pre,
 .code {
-	color: darken($green, 22%);
+	// color: darken(var($green), 22%);
 	font-size: 20px;
 	line-height: 1.2;
 
@@ -206,7 +206,7 @@ blockquote {
 	tr,
 	td {
 		font-size: 14px;
-		color: $dark;
+		color: var($dark);
 		padding: 4px;
 	}
 
@@ -218,7 +218,7 @@ blockquote {
 	small,
 	font {
 		font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0;
-		color: $purple;
+		color: var($purple);
 		font-size: 14px;
 	}
 }

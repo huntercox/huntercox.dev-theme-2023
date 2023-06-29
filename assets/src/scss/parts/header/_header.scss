@@ -1,8 +1,8 @@
 .header {
-	background-color: $dark;
-	background: linear-gradient(45deg, $dark 20%, $dark 80%);
-	border-top: 1px solid $green;
-	border-bottom: 1px solid $green;
+	background-color: var($dark);
+	background: linear-gradient(45deg, var($dark) 20%, var($dark) 80%);
+	border-top: 1px solid var($green);
+	border-bottom: 1px solid var($green);
 	height: 60px;
 
 	.container {
@@ -14,9 +14,9 @@
 
 	/* Brand */
 	&__brand {
-		background-color: $pink;
-		border-top: 1px solid $pink;
-		border-bottom: 1px solid $pink;
+		background-color: var($pink);
+		border-top: 1px solid var($pink);
+		border-bottom: 1px solid var($pink);
 		padding: 15px;
 		display: block;
 		height: 100%;
@@ -25,7 +25,7 @@
 			line-height: 30px;
 
 			a {
-				color: $dark;
+				color: var($dark);
 				font-variation-settings: "wght" 200;
 
 				&:hover {
@@ -51,7 +51,7 @@
 				margin-bottom: 0;
 
 				a {
-					color: $pink;
+					color: var($pink);
 					font-weight: bold;
 				}
 

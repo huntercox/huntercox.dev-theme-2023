@@ -11,7 +11,13 @@ get_header();
 // Get Flexible Content functions
 require get_template_directory() . '/functions/acf/flexible-content.php';
 
+$variables = $doesnt_exist;
 
+echo $variables;
+
+$variables1 = $doesnt_exist1;
+
+echo $variables1;
 if (have_rows('flex_layouts')) :
 	while (have_rows('flex_layouts')) : the_row();
 

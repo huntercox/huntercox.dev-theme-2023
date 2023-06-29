@@ -7,6 +7,16 @@ get_header();
 	</div>
 </div>
 
+<div class="dev-stats">
+	<div class="container">
+		<h4>Developer Stats</h4>
+		<ul>
+			<li>Web Developer for 10 years</li>
+			<li>WordPress/PHP Developer for 7 years</li>
+			<li>Over 5 years of agency experience</li>
+		</ul>
+	</div>
+</div>
 
 <div class="employment-history">
 	<div class="container">

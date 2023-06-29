@@ -10,7 +10,7 @@
 				@extend .color-label;
 				margin-right: 10px;
 				margin-bottom: 10px;
-				color: $dark;
+				color: var($dark);
 			}
 		}
 	}

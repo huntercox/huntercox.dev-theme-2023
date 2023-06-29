@@ -21,16 +21,16 @@
 }
 
 .button {
-	background-color: $green;
+	background-color: var($green);
 	border-radius: 4px;
-	border: 1px solid $dark;
+	border: 1px solid var($dark);
 	padding: 11px 14px 8px 14px;
-	color: $dark;
+	color: var($dark);
 	font-size: 12px;
 	font-family: $font-family;
 
 	&:hover {
-		background-color: $dark;
+		background-color: var($dark);
 		color: $white;
 	}
 }
@@ -38,14 +38,14 @@
 .shadow-button {
 	/* Basic box-shadow */
 	padding: 11px 16px 6px 16px;
-	background-color: $dark;
+	background-color: var($dark);
 	box-shadow: 4px 4px 0px $white;
 	font-weight: normal;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 
 	&:hover {
-		box-shadow: 4px 4px 0px $green;
+		box-shadow: 4px 4px 0px var($green);
 	}
 }
 
@@ -75,20 +75,20 @@ i[class^=devicon-] {
 
 .label {
 	padding: 8px 12px 7px 13px;
-	background-color: rgba($white, 0.05);
-	border: 1px solid $purple;
+	// background-color: rgba($white, 0.05);
+	border: 1px solid var($purple);
 
 	&:hover {
-		background-color: rgba($white, 0.10);
+		// background-color: rgba($white, 0.10);
 		cursor: pointer;
 	}
 
 	&--active {
-		background-color: $purple;
-		border: 1px solid $pink;
+		background-color: var($purple);
+		border: 1px solid var($pink);
 
 		&:hover {
-			background-color: $purple;
+			background-color: var($purple);
 			cursor: default;
 		}
 

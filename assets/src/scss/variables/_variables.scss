@@ -24,6 +24,6 @@ $duotone: './node_modules/sargam-icons/icons/Duotone';
 
 
 // Main Color Variables
-$background_color: $dark;
-$font_color1: $green;
-$font_color2: $pink;
+// $background_color: $dark;
+$font_color1: var($green);
+$font_color2: var($pink);

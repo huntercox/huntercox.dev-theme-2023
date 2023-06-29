@@ -1,59 +1,51 @@
 /* Colors */
 
-// My First Theme
-// $green: #5dfdcbff;
-// $dark-purple: #2b1e48ff;
-// $dark: #6f5e97ff;
-// $grey: #5b546eff;
-// $white: #e9e9e9ff;
-// $black: #121417ff;
-
-// $color1: $green;
-// $color2: $dark-purple;
-// $color3: $dark;
-
-// $light-bg: rgb(223, 221, 234);
-// $dark-bg: rgb(45, 38, 61);
-
-/**
- * Monterey Theme
- *
-**/
-// // Pink, "Wild Orchid"
-// $green: #D96CA8;
-// $wild-orchid: rgba(216, 107, 168, 1);
-// // Purple, "Interdimensional Blue"
-// $dark: #580BCB;
-// $interdimensional-blue: rgba(87, 11, 202, 1);
-// // Blue, "Persian Indigo"
-// $dark: #221473;
-// $persian-indigo: rgba(33, 20, 114, 1);
-// // Yellow, "Gold Web"
-// $green: #FFCC00;
-// $gold-web: rgb(255, 204, 0) 100%, 50%;
 
 
-// $dark: rgb(26, 24, 32);
-// $green: rgb(0, 178, 116);
-// $pink: rgb(213, 105, 188);
+// $green: var($green);
+// $indigo: var($indigo);
+// $pink: var($pink);
+// $yellow: var($yellow);
+// $blue: var($blue);
+// $red: var($red);
+// $purple: var($purple);
 
-$dark: #1e1e3fa8;
-$indigo: #001775;
-$purple: #514A8E;
-$green: #38D6B4;
-$pink: #FF7CC2;
-$yellow: #d0b628;
-$blue: #547cff;
-$red: #cb4155;
 
+$colors: (
+	#514A8E,
+	#38D6B4,
+	#FF7CC2,
+	#d0b628,
+	#547cff,
+	#cb4155,
+	#514a8e
+);
 
 // White, Light color
 $white: #ECE1F1;
-$light: rgba(235, 225, 240, 1);
+$light: rgb(235, 225, 240);
 // Black, Dark color
 $black: #16023D;
-$dark: rgba(21, 2, 61, 1);
+$dark: rgb(21, 2, 61);
 
+// $dark: #1e1e3f;
+// $indigo: #001775;
+// $green: #38D6B4;
+// $pink: #FF7CC2;
+// $yellow: #d0b628;
+// $blue: #547cff;
+// $red: #cb4155;
+// $purple: #514A8E;
+
+// VARIABLES from WP Admin Color Palette
+$dark: --hsc-dark;
+$green: --hsc-green;
+$indigo: --hsc-indigo;
+$pink: --hsc-pink;
+$yellow: --hsc-yellow;
+$blue: --hsc-blue;
+$red: --hsc-red;
+$purple: --hsc-purple;
 
 
 /* Output color palette/swatches to front-end */
@@ -150,19 +142,11 @@ $dark: rgba(21, 2, 61, 1);
 
 }
 
-$colors: (
-	#514A8E,
-	#38D6B4,
-	#FF7CC2,
-	#d0b628,
-	#547cff,
-	#cb4155
-);
 
 @mixin random-color-li() {
 	@for $i from 1 through $repeat {
 		li:nth-child(#{length($colors)}n+#{$i}) {
-			background: lighten(nth($colors, random(length($colors))), 20%);
+			// background: lighten(nth($colors, random(length($colors))), 20%);
 		}
 	}
 }

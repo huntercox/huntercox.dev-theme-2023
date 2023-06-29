@@ -32,7 +32,7 @@ function hsc_enqueue_styles_and_scripts()
 	// wp_enqueue_script('parallax');
 
 	/* Enqueue Xdebug plugin */
-	wp_enqueue_script('hscdev2023-xdebug-error-tab', get_template_directory_uri() . '/assets/src/js/xdebug-error-tab.js', array('jquery'), '1.0.0', false);
+	//wp_enqueue_script('hscdev2023-xdebug-error-tab', get_template_directory_uri() . '/assets/src/js/xdebug-error-tab.js', array('jquery'), '1.0.0', false);
 
 	/* Project Archive - Category, Date Filters */
 	if (is_archive('project')) {

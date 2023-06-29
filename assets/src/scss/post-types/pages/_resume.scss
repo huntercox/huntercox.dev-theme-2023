@@ -15,19 +15,19 @@
 .employer {
 	margin-bottom: 1rem;
 	border-radius: 3px;
-	border: 1px solid $green;
+	border: 1px solid var($green);
 	overflow: hidden;
 	margin-bottom: 0;
 
 	// Current Employer
 	&--current {
-		border-color: $yellow;
+		border-color: var($yellow);
 		position: relative;
 
 		.employer__name {
-			background-color: $yellow;
-			border-color: $yellow;
-			color: $dark;
+			background-color: var($yellow);
+			border-color: var($yellow);
+			color: var($dark);
 		}
 
 		&::after {
@@ -35,11 +35,10 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			font-size: 14px;
+			font-size: 18px;
 			font-variation-settings: "MONO" 1, "CASL" 0.5, "wght" 800, "slnt" 0, "CRSV" 1;
 			padding: 5px 10px;
-			background-color: $white;
-			color: darken($yellow, 10%);
+			background-color: var($white);
 		}
 	}
 
@@ -63,7 +62,7 @@
 	&__job-title {
 		font-size: 18px;
 		font-variation-settings: "MONO" 1, "CASL" 0.5, "wght" 800, "slnt" 0, "CRSV" 1;
-		color: $pink;
+		color: var($pink);
 		margin-bottom: 10px;
 	}
 
@@ -75,20 +74,20 @@
 			width: 120px;
 			text-align: right;
 			font-variation-settings: "MONO" 1, "CASL" 0.5, "wght" 800, "slnt" 0, "CRSV" 1;
-			color: $yellow;
+			color: var($yellow);
 		}
 		// Lenght of Time
 		&__length-of-employment {
 			font-size: 14px;
 			font-variation-settings: "MONO" 1, "CASL" 0.5, "wght" 800, "slnt" 0, "CRSV" 1;
-			color: lighten($yellow, 20%);
+			// color: lighten(var($yellow), 20%);
 			position: relative;
 			text-indent: 20px;
 			padding-top: 4px;
 
 			&::before {
 				content: "";
-				background-color: $yellow;
+				background-color: var($yellow);
 				height: 1px;
 				width: 15px;
 				position: absolute;
@@ -110,16 +109,16 @@
 	// Skills Used
 	&__skills-used {
 		span {
-			color: $pink;
+			color: var($pink);
 			font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" -14, "CRSV" 1;
-			border-bottom: 1px solid $pink;
+			border-bottom: 1px solid var($pink);
 			display: block;
 			padding: 4px;
 		}
 		ul {
 			margin-top: 0px;
 			margin-left: 10px;
-			border-left: 1px solid $pink;
+			border-left: 1px solid var($pink);
 			padding-top: 6px;
 			padding-left: 10px;
 			column-count: 2;
