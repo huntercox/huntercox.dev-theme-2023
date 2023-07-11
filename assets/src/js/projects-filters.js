@@ -72,31 +72,31 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	let filteredCheckbox = $('#checkbox_filtered');
+	// let filteredCheckbox = $('#checkbox_filtered');
 
-	$('#checkbox_filtered').change(function (e) {
-		e.preventDefault();
-
-
-		var isChecked = $('#checkbox_filtered').is(':checked') ? 'checked' : 'not-checked';
-
-		$.ajax({
-			type: 'POST',
-			url: hsc_projects_filters.ajaxurl,
-			// dataType: 'html',
-			// contentType: 'multipart/form-data',
-			data: {
-				action: 'hsc_projects_filters_action',
-				category: $('#category-filters').serialize(),
-				date: $('#date-filters').serialize(),
-			},
-			success: function (response) {
-				$('#response').html(response);
-				log
-			},
-
-		});
+	// $('#checkbox_filtered').change(function (e) {
+	// 	e.preventDefault();
 
 
-	});
+	// 	var isChecked = $('#checkbox_filtered').is(':checked') ? 'checked' : 'not-checked';
+
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		url: hsc_projects_filters.ajaxurl,
+	// 		// dataType: 'html',
+	// 		// contentType: 'multipart/form-data',
+	// 		data: {
+	// 			action: 'hsc_projects_filters_action',
+	// 			category: $('#category-filters').serialize(),
+	// 			date: $('#date-filters').serialize(),
+	// 		},
+	// 		success: function (response) {
+	// 			$('#response').html(response);
+	// 			log
+	// 		},
+
+	// 	});
+
+
+	// });
 });
