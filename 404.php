@@ -12,8 +12,8 @@ get_header();
 <div class="404__content">
 	<div class="container">
 		Sorry, you have reached a page that does not exist.
-
-		I'm not sure you've managed to do this but you should definitely go back the other way!
+		<br />
+		I'm not sure how you've managed to do this but you should definitely go back the other way!
 		<br />
 		<br />
 		<em>SCRAM!</em>
