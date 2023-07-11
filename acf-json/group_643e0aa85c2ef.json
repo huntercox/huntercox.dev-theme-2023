@@ -955,5 +955,25 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683489891
+    "show_in_graphql": 1,
+    "graphql_field_name": "flexLayouts",
+    "map_graphql_types_from_location_rules": 1,
+    "graphql_types": [
+        "ContentNode",
+        "MediaItem",
+        "Page",
+        "Post",
+        "TermNode",
+        "Category",
+        "PostFormat",
+        "Tag",
+        "ContentTemplate",
+        "DefaultTemplate",
+        "Template_FlexibleContent",
+        "Comment",
+        "Menu",
+        "MenuItem",
+        "User"
+    ],
+    "modified": 1688298973
 }
