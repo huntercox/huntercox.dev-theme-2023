@@ -34,6 +34,9 @@ add_action('init', function () {
 		),
 		'public' => true,
 		'show_in_rest' => true,
+		'show_in_graphql' => true,
+		'graphql_single_name' => 'project',
+		'graphql_plural_name' => 'projects',
 		'menu_icon' => 'dashicons-clipboard',
 		'supports' => array(
 			0 => 'title',
@@ -42,7 +45,7 @@ add_action('init', function () {
 		'taxonomies' => array(
 			0 => 'category',
 		),
-		'has_archive' => 'projects',
+		// 'has_archive' => 'projects',
 		'rewrite' => array(
 			'feeds' => false,
 		),

@@ -35,5 +35,18 @@ require get_template_directory() . '/functions/theme/admin/employer-start-date-c
 /* Theme > Projects */
 require get_template_directory() . '/functions/theme/projects/register-projects.php';
 
+/* Theme > Employers */
+require get_template_directory() . '/functions/theme/employers/register-employers.php';
+
+/* Theme > Skills */
+require get_template_directory() . '/functions/theme/skills/register-skills.php';
+
+
 /* API */
 // require get_template_directory() . '/api/projects/update-post-type.php';
+// add_action('init', function () {
+
+// 	if (is_graphql_http_request()) {
+// 		wp_send_json(['server' => $_SERVER]);
+// 	}
+// });
